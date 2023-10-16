@@ -299,4 +299,5 @@
     <!-- LineageOS maintainer -->
     <string name="maintainer">Maintainer</string>
     <string name="maintainer_name" translatable="false">GioKas93</string>
+    <string name="maintainer_telegram" translatable="false">https://t.me/losvermeersupport</string>
 </resources>
