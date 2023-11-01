@@ -295,4 +295,8 @@
     <string name="selinux_status_disabled">Disabled</string>
     <string name="selinux_status_permissive">Permissive</string>
     <string name="selinux_status_enforcing">Enforcing</string>
+
+    <!-- LineageOS maintainer -->
+    <string name="maintainer">Maintainer</string>
+    <string name="maintainer_name" translatable="false">GioKas93</string>
 </resources>
