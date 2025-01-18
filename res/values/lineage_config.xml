@@ -42,5 +42,5 @@
     <bool name="config_show_now_playing">false</bool>
 
     <!-- Whether to show vendor security patch level -->
-    <bool name="config_show_vendor_patch_level" translatable="false">true</bool>
+    <bool name="config_show_vendor_patch_level" translatable="false">false</bool>
 </resources>
