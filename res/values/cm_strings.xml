@@ -291,6 +291,10 @@
     <string name="maintainer">Maintainer</string>
     <string name="maintainer_name" translatable="false">GioKas93</string>
     <string name="maintainer_telegram" translatable="false">https://t.me/losvermeersupport</string>
-=======
->>>>>>> parent of 339aa781a79 (Settings: gestures: Add page for Screen-Off UDFPS)
+
+
+    <!-- Screen-Off UDFPS -->
+    <string name="security_settings_screen_off_unlock_udfps_title">Screen-off Fingerprint Unlock</string>
+    <string name="security_settings_screen_off_unlock_udfps_keywords">Screen-off, Unlock</string>
+    <string name="security_settings_screen_off_unlock_udfps_description">Use Fingerprint Unlock even when the screen is off</string>
 </resources>
