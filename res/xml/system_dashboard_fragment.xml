@@ -19,6 +19,11 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="system_dashboard_screen"
     android:title="@string/header_category_system">
+    
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="sys_illustration"
+        settings:lottie_rawRes="@raw/sys_illustration"
+        android:order="-1001" />
 
     <Preference
         android:key="language_settings"
@@ -53,6 +58,22 @@
         android:order="-250"
         android:fragment="com.android.settings.gestures.GestureSettings"
         settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
+
+    <Preference 
+        android:key="select_webview_provider"
+        android:icon="@drawable/ic_web"
+        android:title="@string/select_webview_provider_title"
+        android:dialogTitle="@string/select_webview_provider_dialog_title"
+        android:order="-246"
+        android:fragment="com.android.settings.webview.WebViewAppPicker" />
+
+    <Preference
+        android:key="default_usb_configuration"
+        android:fragment="com.android.settings.connecteddevice.usb.UsbDefaultFragment"
+        android:icon="@drawable/ic_usb_24"
+        android:order="-245"
+        android:title="@string/usb_default_config_title"
+        android:summary="@string/usb_default_config_summary"/>
 
     <Preference
         android:key="date_time_settings"
@@ -92,11 +113,6 @@
         android:fragment="com.android.settings.users.UserSettings"
         settings:controller="com.android.settings.users.MultiUserPreferenceController"/>
 
-    <com.android.settings.spa.preference.ComposePreference
-        android:key="developer_options"
-        android:order="-40"
-        settings:controller="com.android.settings.system.DeveloperOptionsController"/>
-
     <Preference
         android:key="device_diagnostics"
         android:title="@string/device_diagnostics_title"
@@ -111,4 +127,9 @@
         android:order="-30"
         android:fragment="com.android.settings.system.ResetDashboardFragment"
         settings:controller="com.android.settings.system.ResetPreferenceController"/>
+        
+    <com.android.settings.spa.preference.ComposePreference
+        android:key="developer_options"
+        android:order="1000"
+        settings:controller="com.android.settings.system.DeveloperOptionsController"/>
 </PreferenceScreen>

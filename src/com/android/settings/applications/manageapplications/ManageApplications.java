@@ -21,7 +21,6 @@ import static androidx.recyclerview.widget.RecyclerView.SCROLL_STATE_IDLE;
 
 import static com.android.internal.jank.InteractionJankMonitor.CUJ_SETTINGS_PAGE_SCROLL;
 import static com.android.settings.ChangeIds.CHANGE_RESTRICT_SAW_INTENT;
-import static com.android.settings.Utils.PROPERTY_DELETE_ALL_APP_CLONES_ENABLED;
 import static com.android.settings.applications.manageapplications.AppFilterRegistry.FILTER_APPS_ALL;
 import static com.android.settings.applications.manageapplications.AppFilterRegistry.FILTER_APPS_BATTERY_OPTIMIZED;
 import static com.android.settings.applications.manageapplications.AppFilterRegistry.FILTER_APPS_BATTERY_RESTRICTED;
@@ -61,7 +60,6 @@ import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.preference.PreferenceFrameLayout;
-import android.provider.DeviceConfig;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.ArraySet;
@@ -192,7 +190,7 @@ public class ManageApplications extends InstrumentedFragment
         MenuItem.OnActionExpandListener {
 
     static final String TAG = "ManageApplications";
-    static final boolean DEBUG = Build.IS_DEBUGGABLE;
+    static final boolean DEBUG = Build.IS_ENG;
 
     // Intent extras.
     public static final String EXTRA_CLASSNAME = "classname";
@@ -863,9 +861,11 @@ public class ManageApplications extends InstrumentedFragment
         }
         mOptionsMenu.findItem(R.id.advanced).setVisible(false);
 
-        mOptionsMenu.findItem(R.id.sort_order_alpha).setVisible(mListType == LIST_TYPE_STORAGE
+        mOptionsMenu.findItem(R.id.sort_order_alpha).setVisible(
+                (mListType == LIST_TYPE_STORAGE || mListType == LIST_TYPE_MAIN)
                 && mSortOrder != R.id.sort_order_alpha);
-        mOptionsMenu.findItem(R.id.sort_order_size).setVisible(mListType == LIST_TYPE_STORAGE
+        mOptionsMenu.findItem(R.id.sort_order_size).setVisible(
+                (mListType == LIST_TYPE_STORAGE || mListType == LIST_TYPE_MAIN)
                 && mSortOrder != R.id.sort_order_size);
 
         mOptionsMenu.findItem(R.id.show_system).setVisible(!mShowSystem
@@ -886,9 +886,7 @@ public class ManageApplications extends InstrumentedFragment
         }
 
         mOptionsMenu.findItem(R.id.delete_all_app_clones)
-                .setVisible(mListType == LIST_TYPE_CLONED_APPS  && DeviceConfig.getBoolean(
-                        DeviceConfig.NAMESPACE_APP_CLONING, PROPERTY_DELETE_ALL_APP_CLONES_ENABLED,
-                true) && Utils.getCloneUserId(getContext()) != -1);
+                .setVisible(mListType == LIST_TYPE_CLONED_APPS && Utils.getCloneUserId(getContext()) != -1);
     }
 
     @Override

@@ -21,6 +21,11 @@
     android:title="@string/power_usage_summary_title"
     settings:keywords="@string/keywords_battery">
 
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="charging_illustration"
+        settings:lottie_rawRes="@raw/charging_illustration"
+        android:order="-999" />
+
     <com.android.settingslib.widget.UsageProgressBarPreference
         android:key="battery_header"
         android:title="@string/summary_placeholder"
@@ -62,6 +67,12 @@
     <lineageos.preference.LineagePartsPreference
         android:key="charging_control"
         settings:requiresService="lineagehealth" />
+
+    <Preference
+        android:key="high_power_apps"
+        android:title="@string/high_power_apps">
+        <intent android:action="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" />
+    </Preference>
 
     <!-- Battery light -->
     <lineageos.preference.LineagePartsPreference

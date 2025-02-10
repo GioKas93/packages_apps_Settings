@@ -30,11 +30,20 @@
     <bool name="config_show_battery_info" translatable="false">true</bool>
 
     <!-- Show battery cycle count -->
-    <bool name="config_show_battery_cycle_count" translatable="false">false</bool>
+    <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
 
     <!-- Whether to show peak refresh rate in display settings -->
     <bool name="config_show_peak_refresh_rate_switch">false</bool>
 
     <!-- Whether to show min refresh rate in display settings -->
     <bool name="config_show_min_refresh_rate_switch">false</bool>
+
+    <!-- Show Now Playing -->
+    <bool name="config_show_now_playing">false</bool>
+
+    <!-- Whether to show vendor security patch level -->
+    <bool name="config_show_vendor_patch_level" translatable="false">false</bool>
+
+    <!-- Whether SELinux status should be shown or not. -->
+    <bool name="config_show_selinux_status">true</bool>
 </resources>

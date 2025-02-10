@@ -21,12 +21,6 @@
     android:key="my_device_info_pref_screen"
     android:title="@string/about_settings">
 
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="my_device_info_header"
-        android:order="-1"
-        android:layout="@layout/settings_entity_header"
-        android:selectable="false"/>
-
     <PreferenceCategory
         android:key="basic_info_category"
         android:selectable="false"
@@ -50,7 +44,7 @@
             settings:enableCopying="true"
             settings:controller="com.android.settings.deviceinfo.BrandedAccountPreferenceController"/>
 
-        <!-- Phone number -->
+        <!-- Phone number
         <com.android.settings.deviceinfo.PhoneNumberSummaryPreference
             android:key="phone_number"
             android:order="3"
@@ -58,7 +52,7 @@
             android:summary="@string/summary_placeholder"
             settings:isPreferenceVisible="@bool/config_show_sim_info"
             settings:controller="com.android.settings.deviceinfo.PhoneNumberPreferenceController"
-            settings:enableCopying="true"/>
+            settings:enableCopying="true"/ -->
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -91,6 +85,16 @@
         android:key="device_detail_category"
         android:selectable="false"
         android:title="@string/my_device_info_device_details_category_title">
+
+        <Preference
+            android:title="@string/radio_info_title"
+            android:key="radio_info_settings"
+            android:order="6"
+            settings:controller="com.android.settings.deviceinfo.RadioInfoPreferenceController">
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.phone"
+                    android:targetClass="com.android.phone.settings.RadioInfo" />
+        </Preference>
 
         <!-- SIM status -->
         <Preference

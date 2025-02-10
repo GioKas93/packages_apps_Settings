@@ -21,6 +21,11 @@
     android:persistent="false"
     android:title="@string/accessibility_settings"
     settings:keywords="@string/keywords_accessibility">
+    
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="acces_illustration"
+        settings:lottie_rawRes="@raw/acces_illustration"
+        android:order="-1001" />
 
     <PreferenceCategory
         android:key="user_installed_services_category"
@@ -52,15 +57,6 @@
             android:persistent="false"
             android:title="@string/accessibility_color_and_motion_title"
             settings:searchable="true"/>
-
-        <com.android.settingslib.PrimarySwitchPreference
-            android:fragment="com.android.settings.accessibility.ToggleReduceBrightColorsPreferenceFragment"
-            android:key="reduce_bright_colors_preference"
-            android:icon="@drawable/ic_reduce_bright_colors"
-            android:persistent="false"
-            android:title="@string/reduce_bright_colors_preference_title"
-            settings:keywords="@string/keywords_reduce_bright_colors"
-            settings:controller="com.android.settings.accessibility.ReduceBrightColorsPreferenceController"/>
 
         <SwitchPreferenceCompat
             android:key="even_dimmer_activated"

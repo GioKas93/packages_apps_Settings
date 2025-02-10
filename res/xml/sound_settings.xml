@@ -21,6 +21,11 @@
     android:key="sound_settings"
     settings:keywords="@string/keywords_sounds">
 
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="sound_illustration"
+        settings:lottie_rawRes="@raw/sound_illustration"
+        android:order="-1001" />
+
     <!-- Remote volume group -->
     <PreferenceCategory
         android:key="remote_media_group"
@@ -30,6 +35,16 @@
         settings:controller="com.android.settings.notification.RemoteVolumeGroupController">
     </PreferenceCategory>
 
+    <!-- Media output switcher -->
+    <Preference
+        android:key="media_output"
+        android:icon="@drawable/ic_media_output"
+        android:title="@string/media_output_title"
+        android:dialogTitle="@string/media_output_title"
+        android:order="-184"
+        settings:searchable="false"
+        settings:controller="com.android.settings.sound.MediaOutputPreferenceController"/>
+
     <!-- Media volume -->
     <com.android.settings.notification.VolumeSeekBarPreference
         android:key="media_volume"
@@ -38,15 +53,6 @@
         android:order="-180"
         settings:userRestriction="no_adjust_volume"
         settings:controller="com.android.settings.notification.MediaVolumePreferenceController"/>
-
-    <!-- Media output switcher -->
-    <Preference
-        android:key="media_output"
-        android:title="@string/media_output_title"
-        android:dialogTitle="@string/media_output_title"
-        android:order="-175"
-        settings:searchable="false"
-        settings:controller="com.android.settings.sound.MediaOutputPreferenceController"/>
 
     <!-- Call volume -->
     <com.android.settings.notification.VolumeSeekBarPreference

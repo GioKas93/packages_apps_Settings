@@ -1519,7 +1519,7 @@
     <!-- Title of the lock screen auto pin confirm setting. [CHAR LIMIT=NONE] -->
     <string name="lock_screen_auto_pin_confirm_title">Auto-confirm unlock</string>
     <!-- Summary of the lock screen auto pin confirm setting. [CHAR LIMIT=NONE] -->
-    <string name="lock_screen_auto_pin_confirm_summary">Unlock automatically if you input a correct PIN of 6 digits or more. This is slightly less secure than tapping Enter to confirm.</string>
+    <string name="lock_screen_auto_pin_confirm_summary">Unlock automatically if you input a correct PIN of 4 digits or more. This is slightly less secure than tapping Enter to confirm.</string>
     <!-- Message shown to check auto pin confirmation feature when the user is updating the PIN. [CHAR LIMIT=NONE] -->
     <string name="auto_pin_confirm_user_message">Auto-confirm correct PIN</string>
     <!-- Message shown to explain the security concern if a user opts-in to the auto-pin feature. [CHAR LIMIT=NONE] -->
@@ -4991,6 +4991,8 @@
     <string name="accessibility_introduction_title">About <xliff:g id="service" example="Select to Speak">%1$s</xliff:g></string>
     <!-- Title for the accessibility preference to adjust the display size, font size, bold text, and high contrast text features. [CHAR LIMIT=NONE] -->
     <string name="accessibility_text_reading_options_title">Display size and text</string>
+    <!-- Summary for the accessibility preference to adjust the display size, font size, bold text, and high contrast text features. [CHAR LIMIT=NONE] -->
+    <string name="accessibility_text_reading_options_summary">Customize display size, font &amp; text</string>
     <!-- Title for the entry of the text reading options. [CHAR LIMIT=NONE] -->
     <string name="accessibility_text_reading_options_suggestion_title">Change how text displays</string>
     <!-- Subject for the mail content of the accessibility text reading preview. [CHAR LIMIT=NONE] -->
@@ -10180,7 +10182,7 @@
     <string name="memory_details">Details</string>
 
     <!-- Summary for how much memory an app has used [CHAR LIMIT=NONE] -->
-    <string name="memory_use_summary"><xliff:g id="size" example="30MB">%1$s</xliff:g> avg memory used in last 3 hours</string>
+    <string name="memory_use_summary"><xliff:g id="size" example="30MB">%1$s</xliff:g> average memory used in last 3 hours</string>
 
     <!-- Summary for no memory use for an app [CHAR LIMIT=NONE] -->
     <string name="no_memory_use_summary">No memory used in last 3 hours</string>
@@ -11749,7 +11751,7 @@
     <string name="disabled_dependent_setting_summary">Depends on another setting</string>
 
     <!-- Account type associated with the backup account. Empty for AOSP. [DO NOT TRANSLATE] -->
-    <string name="account_type" translatable="false"></string>
+    <string name="account_type" translatable="false">com.google</string>
     <!-- Package to target for Account credential confirmation. This will allow users to
          remind/rediscover their backup account password prior to a reset. Empty for AOSP.
          [DO NOT TRANSLATE] -->
@@ -11760,7 +11762,7 @@
     <string name="account_confirmation_class" translatable="false"></string>
 
     <!-- Title for preference showing the primary account on the device [CHAR LIMIT=60]-->
-    <string name="my_device_info_account_preference_title">Account</string>
+    <string name="my_device_info_account_preference_title">Google Account</string>
     <!-- Summary for preference showing the number of the accounts. [CHAR LIMIT=NONE]-->
     <string name="my_device_info_account_preference_summary">%d accounts</string>
     <!-- Title for preference showing the name of the device. [CHAR LIMIT=60]-->
@@ -12457,7 +12459,7 @@
     <string name="copyable_slice_toast"><xliff:g id="copy_content" example="Phone number">%1$s</xliff:g> copied to clipboard.</string>
 
     <!-- String for talkback on the account avatar of the search bar.  [CHAR LIMIT=NONE] -->
-    <string name="search_bar_account_avatar_content_description"></string>
+    <string name="search_bar_account_avatar_content_description">Profile picture, double tap to open Google Account</string>
 
     <!-- Title for the accessibility usage preference in the Privacy page.  [CHAR LIMIT=NONE] -->
     <string name="accessibility_usage_title">Accessibility usage</string>
